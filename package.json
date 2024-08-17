@@ -1,18 +1,25 @@
 {
   "name": "electron",
   "version": "1.0.0",
-  "description": "",
+  "description": "Modelo de aplicação electron.",
   "main": "src/main.js",
+  "homepage": "./",
   "scripts": {
-    "start": "electron ./src/main.js"
+    "start": "electron ./src/main.js",
+    "build": "electron-builder"
   },
   "keywords": [],
-  "author": "",
+  "author": "Johnatan <devsantosjohn@gmail.com> (https://github.com/johnatanSO/electron.git)",
   "license": "ISC",
   "dependencies": {
     "@whiskeysockets/baileys": "^6.7.6",
     "axios": "^1.7.4",
     "electron": "^31.4.0",
+    "electron-builder": "^24.13.3",
     "qrcode": "^1.5.4"
+  },
+  "build": {
+    "appId": "br.com.electron.default",
+    "productName": "Electron default"
   }
 }
