@@ -2,10 +2,10 @@
   "name": "electron",
   "version": "1.0.0",
   "description": "Modelo de aplicação electron.",
-  "main": "main.js",
+  "main": "src/main.js",
   "homepage": "./",
   "scripts": {
-    "start": "electron .",
+    "start": "electron src/main.js",
     "build:win": "rm -rf dist && electron-builder -w"
   },
   "keywords": [],
