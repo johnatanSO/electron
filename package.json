@@ -2,11 +2,11 @@
   "name": "electron",
   "version": "1.0.0",
   "description": "Modelo de aplicação electron.",
-  "main": "src/main.js",
+  "main": "main.js",
   "homepage": "./",
   "scripts": {
-    "start": "electron ./src/main.js",
-    "build": "electron-builder"
+    "start": "electron .",
+    "build:win": "rm -rf dist && electron-builder -w"
   },
   "keywords": [],
   "author": "Johnatan <devsantosjohn@gmail.com> (https://github.com/johnatanSO/electron.git)",
@@ -14,12 +14,21 @@
   "dependencies": {
     "@whiskeysockets/baileys": "^6.7.6",
     "axios": "^1.7.4",
-    "electron": "^31.4.0",
-    "electron-builder": "^24.13.3",
     "qrcode": "^1.5.4"
   },
   "build": {
     "appId": "br.com.electron.default",
-    "productName": "Electron default"
+    "productName": "Electron default",
+    "files": [
+      "build/**/*",
+      "node_modules/**/*"
+    ],
+    "directories": {
+      "buildResources": "public"
+    }
+  },
+  "devDependencies": {
+    "electron": "^31.4.0",
+    "electron-builder": "^24.13.3"
   }
 }
